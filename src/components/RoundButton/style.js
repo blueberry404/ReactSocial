@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
+import colors from '../../constants/colors';
 
 export default StyleSheet.create({
     buttonContainer: {
         height: 40,
         borderRadius: 20,
-        backgroundColor: '#114D4D',
+        backgroundColor: colors.buttonColor,
         justifyContent: 'center',
         paddingHorizontal: 10,
         shadowColor: 'black',
@@ -20,6 +21,6 @@ export default StyleSheet.create({
     textStyle: {
         fontSize: 14,
         fontWeight: 'bold',
-        color: 'white'
+        color: colors.buttonTextColor,
     }
 });

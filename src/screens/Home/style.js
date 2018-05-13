@@ -17,7 +17,6 @@ export default StyleSheet.create({
         marginTop: 15
     },
     headerStyle: {
-        position: 'absolute',
         width: '100%',
         top: 100,
         fontSize: 50,
