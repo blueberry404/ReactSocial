@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import homeReducer from './screenReducers/homeReducer';
+import loginReducer from './loginReducer';
 
 export default combineReducers({
-    homeReducer,
+  login: loginReducer,
 });

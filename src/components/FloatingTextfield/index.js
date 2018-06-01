@@ -10,7 +10,11 @@ export default FloatingTextfield = (props) => {
             <Input 
             style={styles.inputStyle} 
             autoCorrect={false} 
-            underlineColorAndroid='transparent' />
+            underlineColorAndroid='transparent'
+            onChangeText={props.onChangeText}
+            value={props.text}
+            secureTextEntry={props.secure}
+            keyboardType={props.keyboardType} />
         </Item>
     );
 };

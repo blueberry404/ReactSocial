@@ -22,5 +22,9 @@ export default StyleSheet.create({
         width: '80%',
         alignItems: 'center',
         alignSelf: 'center',
-    }
+    },
+    errorLabelStyle: {
+        color: 'red',
+        fontSize: 13,
+    },
 });

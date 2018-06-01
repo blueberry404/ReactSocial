@@ -6,18 +6,13 @@
 
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 
-import rootReducer from './src/reducers';
 import { RootNavigation } from './src/routes/navigation';
+import configureStore from './src/config/configureStore';
 
-const store = createStore(rootReducer);
+const store = configureStore(); // You can also pass in an initialState here
 
 export default class App extends Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
