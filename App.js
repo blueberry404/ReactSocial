@@ -14,11 +14,11 @@ const store = configureStore(); // You can also pass in an initialState here
 
 export default class App extends Component {
 
-  render() {
-    return (
-      <Provider store={store}>
-        <RootNavigation />
-      </Provider>
-    );
-  }
+	render() {
+		return (
+			<Provider store={store}>
+				<RootNavigation />
+			</Provider>
+		);
+	}
 }
