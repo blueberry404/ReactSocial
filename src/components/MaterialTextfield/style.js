@@ -10,4 +10,8 @@ export default StyleSheet.create({
 	labelStyle: {
 		color: colors.accentColor,
 	},
+	errorStyle: {
+		color: colors.errorColor,
+		fontSize: 13,
+	},
 });

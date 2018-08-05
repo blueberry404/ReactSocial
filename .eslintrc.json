@@ -37,6 +37,7 @@
         "import/no-named-as-default": 0,
         "react/jsx-no-duplicate-props": [2, { "ignoreCase": true }],
         "react/prop-types": ["error", { "ignore": ["navigation"] }],
-        "no-console": ["warn", { "allow": ["warn"] }]
+        "no-console": ["warn", { "allow": ["warn"] }],
+        "quotes": ["error", "single"]
     }
 }

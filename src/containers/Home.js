@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 
 import HomeComponent from '../components/Home';
+import * as NavigatorService from '../service/NavigatorService';
 
 class Home extends Component {
 	constructor(props) {
@@ -22,11 +23,11 @@ class Home extends Component {
 	}
 
 	navigateToRegisterScreen() {
-		this.props.navigation.navigate('Signup');
+		NavigatorService.navigate('Signup');
 	}
 
 	navigateToLoginScreen() {
-		this.props.navigation.navigate('Login');
+		NavigatorService.navigate('Login');
 	}
 }
 

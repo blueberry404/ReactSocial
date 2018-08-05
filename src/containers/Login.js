@@ -9,33 +9,47 @@ import LoginView from '../components/LoginView';
 class Login extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {loginSuccess: props.loginSuccess};
 		this.onLogin = this.onLogin.bind(this);
+	}
+
+	static getDerivedStateFromProps(nextProps, prevState){
+		if(nextProps.loginSuccess === true && prevState.loginSuccess !== nextProps.loginSuccess) {
+			return {
+				loginSuccess: true,
+			}
+		}
+		return null;
+	}
+
+	componentDidUpdate(prevProps) {
+		if(prevProps.loginSuccess !== this.state.loginSuccess) {
+			//TODO: Navigate inside app
+		}
 	}
 
 	render() {
 		const {
-			error,
 			isLoading,
 		} = this.props;
 		return (
 			<View style={{ flex: 1 }}>
 				<LoginView
 					onLogin={this.onLogin}
-					error={error}
 					isLoading={isLoading}
 				/>
 			</View>
 		);
 	}
 
-	onLogin(email, password) {
+	onLogin({ email, password} ) {
 		this.props.loginUserWithEmail(email, password);
 	}
 }
 
-const mapStateToProps = ({ login }) => ({
-	isLoading: login.isLoading,
-	error: login.error,
+const mapStateToProps = ({ login, app }) => ({
+	isLoading: app.loading,
+	loginSuccess: login.loginSuccess,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -43,9 +57,9 @@ const mapDispatchToProps = dispatch => ({
 });
 
 Login.propTypes = {
-	isLoading: PropTypes.boolean,
-	error: PropTypes.any,
+	isLoading: PropTypes.bool,
 	loginUserWithEmail: PropTypes.func,
+	loginSuccess: PropTypes.bool,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

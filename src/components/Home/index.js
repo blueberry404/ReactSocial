@@ -20,8 +20,8 @@ const HomeComponent = (props) => {
 			<View style={styles.containerStyle}>
 				<Text style={styles.headerStyle}>React Social</Text>
 				<View style={styles.centerStyle}>
-					<RoundButton style={styles.buttonStyle} title='SIGN UP' onPress={onLogin} />
-					<RoundButton style={styles.buttonStyle} title='LOGIN' onPress={onRegister} />
+					<RoundButton style={styles.buttonStyle} title='SIGN UP' onPress={onRegister} />
+					<RoundButton style={styles.buttonStyle} title='LOGIN' onPress={onLogin} />
 				</View>
 			</View>
 		</ImageBackground>

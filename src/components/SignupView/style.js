@@ -19,6 +19,7 @@ export default StyleSheet.create({
 	},
 	buttonStyle: {
 		marginTop: 40,
+		marginBottom: 40,
 		width: '80%',
 		alignItems: 'center',
 		alignSelf: 'center',
